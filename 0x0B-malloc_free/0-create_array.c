@@ -7,25 +7,26 @@
  * @c: Character to be printed
  * @size: size of memory to print
  *
- * Return: Always 0 (Success)
+ * Return: pointer to array, NULL if fails.
  *
  */
 
 char *create_array(unsigned int size, char c)
 {
+	char *array;
+	unsigned int i;
+
 	if (size == 0)
 	{
 		return (NULL);
 	}
-	char *array = (char *)malloc(size * sizeof(char));
+	array = malloc(size * sizeof(char));
 
 	if (array == NULL)
 	{
 		return (NULL);
 	}
-	for (unsigned int i = 1; i < size; i++)
-	{
-		array[i] = c;
-	}
+	for (i = 0; i < size; i++)
+	array[i] = c;
 	return (array);
 }
