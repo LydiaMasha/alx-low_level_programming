@@ -10,10 +10,9 @@
 
 int main(int argc, char *argv[])
 {
-	int count = argc - 1;
+	(void)argv;
 
-	while (*argv--)
-	printf("%d\n", count);
+	printf("argc = %d\n", argc);
 
 	return (0);
 }
