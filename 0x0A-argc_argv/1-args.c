@@ -10,9 +10,12 @@
 
 int main(int argc, char *argv[])
 {
+	int num = argc;
 	(void)argv;
 
-	printf("argc = %d\n", argc);
-
+	for (num = 0; num < argc; num++)
+	{
+		printf("%d\n", num);
+	}
 	return (0);
 }
