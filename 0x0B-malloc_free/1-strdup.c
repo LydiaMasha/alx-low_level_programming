@@ -27,8 +27,11 @@ char *_strdup(char *str)
 	while (str[a] != '\0')
 		a++;
 
-	for (z = 0; str[z]; z++)
+	for (z = 0; z < a; z++)
+	{
 		sss[z] = str[z];
+	}
+	sss[z] = '\0';
 
 	return (sss);
 }
